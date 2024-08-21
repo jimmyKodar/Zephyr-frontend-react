@@ -12,3 +12,13 @@ html {
   margin-bottom: 0.5rem;
   border: 1px solid white;
 }
+
+.ticker {
+  /* top | right | bottom | left */
+  margin: 0rem 0rem 0rem 0.25rem;
+  padding: 0rem 0.5rem 0rem 0.5rem;
+  border-radius: 3px;
+  background-color: white;
+  color: black;
+  font-weight: 700;
+}

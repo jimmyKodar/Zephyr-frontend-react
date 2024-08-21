@@ -1,19 +1,3 @@
-import { dummyData } from "./getNews";
-
-const newsItems = dummyData; // DEV: While using dummy data
-
-const NewsFeed = () => {
-  return (
-    <article className="newsFeed">
-      <h1>NEWS FEED</h1>
-
-      {newsItems.map((item) => {
-        return <NewsItem key={item.id} {...item} />;
-      })}
-    </article>
-  );
-};
-
 const NewsItem = ({
   author,
   created_at,
@@ -29,7 +13,15 @@ const NewsItem = ({
       <time className="timestamp_recieved"></time>
       <div className="timestamp_created">{created_at}</div>
       <div className="timestamp_updated">{updated_at}</div>
-      <div className="symbols">{symbols}</div>
+      <div className="symbols">
+        {symbols.map((ticker) => {
+          return (
+            <span key={ticker} className="ticker">
+              {ticker}
+            </span>
+          );
+        })}
+      </div>
       <div className="id">{id}</div>
       <div className="author">{author}</div>
       <div className="source">{source}</div>
@@ -39,4 +31,4 @@ const NewsItem = ({
   );
 };
 
-export default NewsFeed;
+export default NewsItem;
