@@ -9,26 +9,34 @@ const NewsItem = ({
   url,
 }) => {
   return (
-    <div className="newsItem">
-      <time className="timestamp_recieved"></time>
-      <div className="timestamp_created">{created_at}</div>
-      <div className="timestamp_updated">{updated_at}</div>
-      <div className="symbols">
+    <article className="newsItem">
+      <h1 className="headline">{headline}</h1>
+      <div className="tickers">
         {symbols.map((ticker) => {
           return (
-            <span key={ticker} className="ticker">
+            <span key={ticker} className={`ticker ${highlight()}`}>
               {ticker}
             </span>
           );
         })}
       </div>
-      <div className="id">{id}</div>
-      <div className="author">{author}</div>
-      <div className="source">{source}</div>
-      <div className="URL">{url}</div>
-      <h1 className="headline">{headline}</h1>
-    </div>
+      <small className="newsItemInfo">
+        ID: {id} / Created: {created_at} / Updated: {updated_at} / Author:{" "}
+        {author} / Source:{" "}
+        <a href={url} target="_blank" rel="noopener noreferrer">
+          {source}
+        </a>
+      </small>
+    </article>
   );
 };
+
+function highlight() {
+  if (Math.random() * 100 > 70) {
+    return "tickerHighlight";
+  } else {
+    return "";
+  }
+}
 
 export default NewsItem;

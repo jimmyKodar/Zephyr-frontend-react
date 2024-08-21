@@ -1,24 +1,83 @@
-html {
+html,
+body {
+  margin: 0rem;
+  padding: 0rem;
   font-family: system-ui;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: black;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+.topMenu {
+  /* top | right | bottom | left */
+  margin: 0rem;
+  padding: 0.25rem 0.25rem 0.25rem 0.5rem;
+
+  background-color: rgb(40, 54, 65);
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+}
+
+.newsFeed {
+  /* top | right | bottom | left */
+  margin: 0.5rem 0.25rem 0rem 0.25rem;
+  padding: 0rem 0rem 0rem 0rem;
+}
+
 .newsItem {
   margin-bottom: 0.5rem;
-  border: 1px solid white;
+  /* top | right | bottom | left */
+  padding: 0.2rem 0rem 0.2rem 0.3rem;
+  border: 1px solid rgb(146, 146, 146);
+  border-radius: 10px;
+}
+
+.newsItem:nth-child(2n) {
+  background-color: rgb(0, 0, 0);
+}
+
+.headline {
+  /* top | right | bottom | left */
+  margin: 0rem 0rem 0rem 0.25rem;
+  padding: 0rem 0rem 0.25rem 0rem;
 }
 
 .ticker {
   /* top | right | bottom | left */
   margin: 0rem 0rem 0rem 0.25rem;
-  padding: 0rem 0.5rem 0rem 0.5rem;
+  padding: 0rem 0.5rem 0.05rem 0.5rem;
   border-radius: 3px;
   background-color: white;
   color: black;
   font-weight: 700;
+}
+.tickerHighlight {
+  background-color: green;
+  color: white;
+}
+
+.newsItemInfo {
+  margin-left: 0.25rem;
+  color: rgba(146, 146, 146, 0.87);
+  font-size: 0.6rem;
+  font-weight: 300;
+}
+
+a:link {
+  color: rgb(57, 176, 255);
+}
+
+a:visited {
+  color: rgb(30, 108, 136);
+}
+
+a:hover {
+  color: rgb(152, 228, 255);
 }

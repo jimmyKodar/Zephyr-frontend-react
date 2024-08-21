@@ -1,5 +1,9 @@
 const Header = () => {
-  return <h1>ZEPHYR NEWS</h1>;
+  return (
+    <header className="topMenu">
+      <span className="logo">ZEPHYR NEWS</span>
+    </header>
+  );
 };
 
 export default Header;
