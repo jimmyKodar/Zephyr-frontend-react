@@ -2,8 +2,9 @@ html,
 body {
   margin: 0rem;
   padding: 0rem;
-  font-family: system-ui;
-  color: rgba(255, 255, 255, 0.87);
+  font-size: 16px;
+  font-family: system-ui, sans-serif;
+  color: white;
   background-color: black;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -20,8 +21,8 @@ body {
 }
 
 .logo {
-  font-size: 2rem;
   font-weight: 700;
+  font-style: italic;
   color: white;
 }
 
@@ -32,30 +33,45 @@ body {
 }
 
 .newsItem {
-  margin-bottom: 0.5rem;
+  display: grid;
+  grid-template-columns: 6rem 1fr;
+  align-items: first baseline;
   /* top | right | bottom | left */
-  padding: 0.2rem 0rem 0.2rem 0.3rem;
-  border: 1px solid rgb(146, 146, 146);
-  border-radius: 10px;
+  padding: 0rem 0rem 0rem 0rem;
+  margin: 0.5rem 0rem 0.5rem 0rem;
+  /* border: 1px solid rgb(146, 146, 146);
+  border-radius: 10px; */
 }
 
-.newsItem:nth-child(2n) {
-  background-color: rgb(0, 0, 0);
-}
+/* .newsItem:nth-child(2n) {
+  background-color: rgb(26, 26, 26);
+} */
 
+.timestamp {
+  font-family: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas,
+    "DejaVu Sans Mono", monospace;
+  font-weight: 300;
+  color: white;
+  justify-self: center;
+}
 .headline {
   /* top | right | bottom | left */
   margin: 0rem 0rem 0rem 0.25rem;
   padding: 0rem 0rem 0.25rem 0rem;
+  font-weight: 300;
 }
 
 .ticker {
-  /* top | right | bottom | left */
-  margin: 0rem 0rem 0rem 0.25rem;
-  padding: 0rem 0.5rem 0.05rem 0.5rem;
+  font-family: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas,
+    "DejaVu Sans Mono", monospace;
+  display: inline-block; /* top | right | bottom | left */
+  max-height: 1rem;
+  margin: 0rem 0.3rem 0rem 0rem;
+  padding: 0rem 0.3rem 0.2rem 0.3rem;
   border-radius: 3px;
   background-color: white;
   color: black;
+
   font-weight: 700;
 }
 .tickerHighlight {
@@ -65,9 +81,9 @@ body {
 
 .newsItemInfo {
   margin-left: 0.25rem;
-  color: rgba(146, 146, 146, 0.87);
-  font-size: 0.6rem;
-  font-weight: 300;
+  color: rgba(95, 95, 95, 0.87);
+  font-size: 12px;
+  font-weight: 500;
 }
 
 a:link {
