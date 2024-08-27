@@ -28,13 +28,13 @@ body {
 
 .newsFeed {
   /* top | right | bottom | left */
-  margin: 0.5rem 0.25rem 0rem 0.25rem;
+  margin: 0.5rem 0rem 0rem 0rem;
   padding: 0rem 0rem 0rem 0rem;
 }
 
 .newsItem {
   display: grid;
-  grid-template-columns: 6rem 1fr;
+  grid-template-columns: 5rem 1fr;
   align-items: first baseline;
   /* top | right | bottom | left */
   padding: 0rem 0rem 0rem 0rem;
@@ -43,15 +43,9 @@ body {
   border-radius: 10px; */
 }
 
-/* .newsItem:nth-child(2n) {
-  background-color: rgb(26, 26, 26);
-} */
-
 .timestamp {
-  font-family: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas,
-    "DejaVu Sans Mono", monospace;
-  font-weight: 300;
-  color: white;
+  margin: 0;
+  padding: 0;
   justify-self: center;
 }
 .headline {

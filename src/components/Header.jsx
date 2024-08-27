@@ -1,3 +1,5 @@
+// import getNews from "../getNews.js";
+
 const Header = () => {
   return (
     <header className="topMenu">
