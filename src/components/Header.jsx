@@ -1,9 +1,12 @@
-// import getNews from "../getNews.js";
+import Clock from "./Clock";
+import MenuButtons from "./MenuButtons";
 
 const Header = () => {
   return (
-    <header className="topMenu">
+    <header>
+      <Clock />
       <span className="logo">ZEPHYR NEWS</span>
+      <MenuButtons />
     </header>
   );
 };
